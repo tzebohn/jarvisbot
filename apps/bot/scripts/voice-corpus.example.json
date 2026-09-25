@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "samples": [
+    { "id": "alice-quiet-command", "file": "../voice-samples/alice-quiet.wav", "source": "recording", "conditions": ["quiet", "headphones"], "expectedWake": true, "referenceText": "play Numb by Linkin Park" },
+    { "id": "alice-keyboard-command", "file": "../voice-samples/alice-keyboard.wav", "source": "recording", "conditions": ["keyboard", "headphones"], "expectedWake": true, "referenceText": "play Numb by Linkin Park" },
+    { "id": "bob-fan-wake", "file": "../voice-samples/bob-fan.wav", "source": "recording", "conditions": ["fan", "speakers"], "expectedWake": true },
+    { "id": "bob-hiss-wake", "file": "../voice-samples/bob-hiss.wav", "source": "recording", "conditions": ["hiss", "headphones"], "expectedWake": true },
+    { "id": "alice-speakers-command", "file": "../voice-samples/alice-speakers.wav", "source": "recording", "conditions": ["speakers", "background-speech"], "expectedWake": true, "referenceText": "pause the music" },
+    { "id": "quiet-near-misses", "file": "../voice-samples/near-misses.wav", "source": "recording", "conditions": ["quiet", "near-miss"], "expectedWake": false },
+    { "id": "keyboard-only", "file": "../voice-samples/keyboard-only.wav", "source": "recording", "conditions": ["keyboard"], "expectedWake": false },
+    { "id": "fan-only", "file": "../voice-samples/fan-only.wav", "source": "recording", "conditions": ["fan"], "expectedWake": false },
+    { "id": "hiss-only", "file": "../voice-samples/hiss-only.wav", "source": "recording", "conditions": ["hiss"], "expectedWake": false },
+    { "id": "background-conversation", "file": "../voice-samples/background-conversation.wav", "source": "recording", "conditions": ["background-speech", "speakers"], "expectedWake": false }
+  ]
+}

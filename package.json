@@ -1,0 +1,8 @@
+{
+  "name": "discord-music-platform",
+  "private": true,
+  "scripts": {
+    "dev:dashboard": "pnpm --filter dashboard dev",
+    "dev:bot": "pnpm --filter bot dev"
+  }
+}

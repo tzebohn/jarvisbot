@@ -1,0 +1,8 @@
+node_modules
+.env
+apps/bot/dist/
+packages/shared/dist/
+apps/bot/models/
+apps/bot/.venv-stt/
+__pycache__/
+apps/bot/voice-samples/

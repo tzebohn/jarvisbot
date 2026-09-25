@@ -1,0 +1,43 @@
+{
+  "name": "bot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "remove-legacy-commands": "tsx src/removeLegacyCommands.ts",
+    "diagnose:youtube": "tsx scripts/diagnose-youtube.mjs",
+    "diagnose:vad": "tsx scripts/diagnose-vad.mjs",
+    "setup:wake": "tsx scripts/setup-wake.mjs",
+    "diagnose:wake": "tsx scripts/diagnose-wake.mjs",
+    "diagnose:voice": "tsx scripts/diagnose-voice.mjs",
+    "setup:stt": "tsx scripts/setup-stt.mjs",
+    "diagnose:stt": "tsx scripts/diagnose-stt.mjs",
+    "diagnose:commands": "tsx scripts/diagnose-commands.mjs",
+    "build": "pnpm --filter @discord-music-platform/shared build && tsc",
+    "start": "node dist/index.js",
+    "typecheck": "pnpm --filter @discord-music-platform/shared build && tsc -p tsconfig.typecheck.json",
+    "test": "node --import tsx --experimental-test-module-mocks --test tests/*.test.mjs",
+    "test:voice-concurrency": "node --import tsx --experimental-test-module-mocks --test tests/voiceConcurrency.test.mjs tests/voiceSessions.test.mjs tests/wakeReceive.test.mjs tests/voiceMusicCommands.test.mjs tests/fasterWhisper.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@discord-music-platform/shared": "workspace:*",
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.2",
+    "@echogarden/fvad-wasm": "0.2.0",
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2",
+    "groq-sdk": "^1.6.0",
+    "sherpa-onnx-node": "1.13.8"
+  }
+}

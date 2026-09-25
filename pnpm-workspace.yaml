@@ -1,0 +1,7 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+allowBuilds:
+  '@discordjs/opus': true
+  esbuild: false
+  unrs-resolver: false
